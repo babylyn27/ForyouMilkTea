@@ -1,0 +1,331 @@
+* {
+    box-sizing: border-box;
+    transition: all 0.2s;
+  }
+  
+  body {
+    margin: 0px;
+    overflow: hidden;
+  }
+  
+  body .heading {
+    font-size: 1.5rem;
+    margin: 7rem 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 200;
+    color: #cb904d;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  
+  body .heading::after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 22%;
+    left: 12%;
+    border: 1px solid #cb904d31;
+    z-index: 1;
+  }
+  
+  @keyframes move {
+    from {
+      transform: rotate(35deg) translate(-100px, 60px);
+    }
+    to {
+      transform: rotate(35deg) translate(-100px, -290px);
+    }
+  }
+  body .containerrrr {
+    margin: 0px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    animation: move 4.5s linear infinite alternate;
+   
+  }
+  
+  .containerrrr .child-containerrrr {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: #b9b9b9;
+    text-align: center;
+    overflow: hidden;
+    
+  }
+  
+  .child-containerrrr img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    display: inline;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    body .heading {
+      margin: 9rem 3rem;
+      font-size: 6rem;
+    }
+  }
+  
+  @media screen and (max-width: 780px) {
+    body .heading {
+      font-size: 4rem;
+      margin: 12rem 2rem;
+    }
+    @keyframes move {
+      from {
+        transform: rotate(35deg) translate(20px, 80px);
+      }
+      to {
+        transform: rotate(35deg) translate(20px, 20px);
+      }
+    }
+  
+    body .containerrrr {
+      gap: 0.5rem;
+    }
+    .containerrrr .child-containerrrr {
+      width: 100px;
+      height: 100px;
+      border-radius: 4px;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    body .heading {
+      margin: 8rem 2rem;
+    }
+  
+    @keyframes move {
+      from {
+        transform: rotate(35deg) translate(100px, 80px);
+      }
+      to {
+        transform: rotate(35deg) translate(100px, 20px);
+      }
+    }
+  }
+  .blog-content {
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.blog-left {
+    flex-basis: 65%;
+}
+
+.blog-left img {
+    width: 100%;
+}
+
+.blog-left h2 {
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+
+.blog-left p {
+    color: #999;
+    padding: 0;
+}
+
+.blog-right {
+    flex-basis: 32%;
+}
+
+.blog-right h3 {
+    background: #f44336;
+    color: #fff;
+    padding: 7px 0;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.blog-right div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #555;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.comment-box {
+    border: 1px solid '#857797';
+    margin-bottom: 50px 0;
+    padding: 10px 20px;
+}
+
+.comment-box h3 {
+    text-align: left;
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #d6d0bc;
+}
+.contact-col {
+    flex-basis: 48%;
+}
+
+.contact-col div {
+    display: flex;
+    justify-content: center;
+}
+.comment-form button {
+    margin: 10px 0;
+}
+
+.contact-col input,
+.contact-col textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.containerr {
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    color: rgb(253, 210, 153);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 400px;
+    height: 550px;
+    box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.26);
+    background: url(../images/Java-chip.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inner_box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(-180deg);
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(236, 200, 39, 0.562), rgba(172, 162, 140, 0.8));
+    padding: 50px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card h2 {
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 6px 0;
+    height: 32px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+::placeholder {
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+}
+
+.submit-btn,
+.btn {
+    width: 100%;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 35px 0 10px;
+    height: 32px;
+    font-size: 12px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    background: rgb(238, 129, 4);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.submit-btn {
+    position: relative;
+}
+
+
+span {
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.card .btn {
+    margin-top: 20px;
+}
+
+.card a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.head {
+    text-align: center;
+}
+.scroll {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2rem;
+  z-index: 2;
+}
+.scroll a {
+  color: var(--black);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.scroll a:hover {
+  color: var(--black);
+}
+.scroll .svg {
+  margin-right: 0.5rem;
+}
